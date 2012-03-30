@@ -32,6 +32,8 @@ GEM
     arel (3.0.2)
     bootstrap-sass (2.0.1)
     bson (1.6.1)
+    bson_ext (1.6.1)
+      bson (~> 1.6.1)
     builder (3.0.0)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -169,6 +171,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 2.0.0)
+  bson_ext (~> 1.5)
   capybara
   capybara-firebug
   coffee-rails (~> 3.2.1)
@@ -181,7 +184,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   launchy
-  mongoid
+  mongoid (~> 2.4)
   rails (= 3.2.1)
   rspec-rails
   sass-rails (~> 3.2.3)
