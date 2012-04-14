@@ -8,4 +8,9 @@ describe "Urls" do
       response.status.should be(200)
     end
   end
+  
+  describe "should show the form for the user", :js => true do
+    visit "/"
+    page.current_path.should == urls_path
+  end
 end
