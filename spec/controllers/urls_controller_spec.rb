@@ -9,5 +9,12 @@ describe UrlsController do
       response.should be_success
     end
   end
+  
+  describe "GET 'new'" do
+    it "should get the new page" do
+      get :new
+      assigns(:url).is_a?(Url).should be_true
+    end
+  end
 
 end
