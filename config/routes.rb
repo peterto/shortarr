@@ -1,6 +1,6 @@
 Shortarr::Application.routes.draw do
   
-  root :to => "urls#index"
+  root :to => "urls#new"
   resources :urls
   # The priority is based upon order of creation:
   # first created -> highest priority.
