@@ -1,8 +1,10 @@
+require 'rubygems'
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
+require 'capybara'
 require 'capybara/rspec'
 require 'capybara/firebug'
 
@@ -11,6 +13,16 @@ require 'capybara/firebug'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
+  
+  config.before(:each) do
+    if example.metadata[:js]
+      Capybara.current_driver = :selenium
+    end
+  end
+  
+  config.after(:each) do
+    Capybara.use_default_driver if example.metadata[:js]
+  end
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:

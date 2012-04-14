@@ -9,8 +9,11 @@ describe "Urls" do
     end
   end
   
-  describe "should show the form for the user", :js => true do
-    visit "/"
-    page.current_path.should == urls_path
+  describe "should" do
+    it "show the form to the user" do
+      visit urls_path
+      page.current_path.should == urls_path
+    end
   end
+  
 end

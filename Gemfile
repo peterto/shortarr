@@ -22,20 +22,21 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'awesome_print'
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'capybara'
-  gem 'capybara-firebug'
+  gem 'fabrication'
   gem 'shoulda-matchers'
-  gem 'database_cleaner'
   gem 'spork'
   gem 'guard-rspec'
   gem 'guard-spork'
-  gem 'ffaker'
-  gem 'fabrication'
-  gem 'launchy'
   gem 'growl'
+  gem 'capybara'
+  gem 'capybara-firebug'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'ffaker'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
