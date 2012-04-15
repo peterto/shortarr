@@ -26,6 +26,6 @@ class UrlsController < ApplicationController
   
   def go
     @url = Url.find(params[:id])
-    redirect_to @url.url_path#, :status => @url.http_status
+    redirect_to @url.url_path
   end
 end
