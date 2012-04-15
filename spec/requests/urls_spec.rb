@@ -11,8 +11,9 @@ describe "Urls" do
   
   describe "should" do
     it "show the form to the user" do
-      visit new_url_path
-      page.current_path.should == new_url_path
+      visit root_path
+      page.current_path.should == root_path
+      page.should have_selector "input.btn"
       page.should have_content "Url path"
     end
   end

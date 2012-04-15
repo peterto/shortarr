@@ -1,1 +1,6 @@
-Hi
+%ul
+  - @urls.each do |url|
+    %li 
+      = link_to url.url_path, url_path(url)
+      %li
+        = link_to url.id.to_s, url.id.to_s
