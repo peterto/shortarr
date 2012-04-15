@@ -1,4 +1,6 @@
 %ul
   - @urls.each do |url|
     %li 
-      = link_to url.url_path, url.id.to_s
+      %span #{url.url_path}:
+      %span
+        = link_to "http://#{request.host}/#{url.id.to_s}", url.id.to_s

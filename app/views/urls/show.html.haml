@@ -1,1 +1,1 @@
-= link_to @url.url_path, @url.url_path
+= link_to "http://#{request.host}/#{@url.id.to_s}", "http://#{request.host}/#{@url.id.to_s}"

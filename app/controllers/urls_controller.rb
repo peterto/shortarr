@@ -10,7 +10,7 @@ class UrlsController < ApplicationController
   def create
     @url = Url.new(params[:url])
     if @url.save
-      redirect_to urls_path, notice: 'A URL was created successfully'
+      redirect_to url_path(@url), notice: 'A URL was created successfully'
     else
       render action: 'new'
     end
